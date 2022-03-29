@@ -1,0 +1,190 @@
+@import '../../styles/all.scss';
+@import '../../styles/sidebar.scss';
+
+#settings-top {
+    margin: 30px 0;
+
+    .container {
+        .wrapper {
+            .settings-my-info {
+            
+                background-color: rgba($mainAccent, 0.100);
+                border-radius: 10px;
+                padding: 30px;
+                text-align: center;
+                border: 2px $mainAccent solid;
+
+                .on-left {
+
+                    .profile-container {
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;
+                        overflow: hidden;
+                        border: 5px $mainAccent solid;
+    
+                        img {
+                            width: 100%;
+                        }
+    
+                        margin: auto;
+                    }
+
+                }
+
+                .my-info {
+                    margin-top: 20px;
+
+                    h1, p {
+                        color: $mainAccent;
+                    }
+
+                    h1 {
+                        font-size: x-large;
+                    }
+                }
+
+                #profile-change {
+                    margin-top: 20px;
+                    input[type="file"] {
+                        display: none;
+                    }
+
+                    input[name="save-profile"] {
+                        background-color: $mainAccent;
+                        cursor: pointer;
+                        padding: 12px;
+                        color: $white;
+                        background-color: $stableAccent;
+                        border-radius: 10px;
+                        border: 0;
+                    }
+
+                    label {
+                        background-color: $mainAccent;
+                        cursor: pointer;
+                        padding: 10px;
+                        font-size: x-small;
+                        color: $white;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#settings-collection {
+    margin: 50px 0;
+
+    .settings-handler {
+        margin-top: 30px;
+        .settings-title, .settings-button {
+            padding: 15px;
+            border: 1px $mainAccent solid;
+        }
+
+        .settings-main {
+            padding: 15px;
+            border-top: 1px $charcoal solid;
+        }
+
+        .settings-button {
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(245, 245, 245);
+            }
+        }
+
+        .settings-title {
+            color: $mainAccent;
+            border-radius: 5px 5px 0 0;
+            background-color: rgba($mainAccent, 0.100);
+        }
+
+        .settings-main {
+            background-color: $white;
+            form {
+                border-top: 1px $mainAccent solid;
+                width: 100%;
+                flex-direction: column !important;
+
+                input {
+                    margin: 2px 0;
+                }
+                input[type="text"], input[type="password"] {
+                    padding: 10px;
+                    border: 0;
+                    border-bottom: 2px $mainAccent solid;
+                    background-color: transparent;
+                }
+
+                button {
+                    background-color: $stableAccent;
+                    color: $white;
+                    padding: 10px;
+                    border: 0;
+                    margin: 10px 0;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+            }
+
+            #changePasswordForm, #changeUsernameForm {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #settings-top {
+    
+        .container {
+            .wrapper {
+                .settings-my-info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+    
+                    .on-left {
+    
+                        .profile-container {
+                            width: 150px;
+                            height: 150px;
+        
+                            img {
+                            }
+        
+                        }
+    
+                    }
+    
+                    .my-info {    
+                        h1, p {
+                        }
+    
+                        h1 {
+
+                        }
+                    }
+    
+                    #profile-change {
+
+                        input[type="file"] {
+                        }
+    
+                        input[name="save-profile"] {
+                        }
+    
+                        label {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

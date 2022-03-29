@@ -1,0 +1,184 @@
+@import '../../../styles/all.scss';
+@import '../../../styles/sidebar.scss';
+
+.bold {
+    font-weight: bold;
+}
+
+#profile-bar {
+    margin-top: 30px;
+    margin-left: -250px;
+    padding-left: 250px;
+    background-color: $white;
+    @include shadow();
+    .container {
+        .profile-bar-wrapper {
+            padding: 20px;
+            border-radius: 10px;
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 5px $mainAccent solid;
+                @include shadow();
+                overflow: hidden;
+                margin: auto;
+                img {
+                    width: 100%;
+                }
+            }
+            .profile-basic-info {
+                margin-top: 20px;
+                color: $mainAccent;
+                text-align: center;
+                h1 {
+                    font-size: xx-large;
+                    margin-bottom: 10px;
+                }
+                p {
+                    line-height: 20px;
+                }
+
+                form {
+
+                    button {
+                        margin-top: 10px;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: transparent;
+                        color: $whiteAccent;
+                        border-radius: 5px;
+                        padding: 10px;
+                        &[name="edit-student"] {
+                            background-color: $stableAccent;
+
+                        }
+                        &[name="deactivate-student"] {
+                            background-color: $dangerAccent;
+
+                        }
+                        &[class="print"] {
+                            background-color: $mainAccent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#studentinfo {
+    margin-top: 30px;
+    .container {
+        .studentinfo-wrapper {
+            .basic-info {
+                h1 {
+                    font-size: larger;
+                    margin: 20px 0 20px 0;
+                }
+                table {
+                    width: 100%;
+                    background-color: $white;
+                    border-radius: 10px;
+                    text-align: left;
+                    th, td {
+                        padding: 20px;
+                    }
+
+                    th {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media print {
+    * {
+        background-color: $white;
+        color: $charcoal;
+    }
+    #profile-bar {
+        box-shadow: none;
+        background-color: $white;
+        .container {
+            .profile-bar-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                .profile-image {
+                    border-radius: 0;
+                    margin: 0;
+                }
+                .profile-basic-info {
+                    width: 60%;
+                    text-align: left;
+                    form {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .main-pane {
+        nav {
+            display: none;
+        }
+    }
+
+    #studentinfo {
+        margin-top: 20px;
+        .container {
+            .studentinfo-wrapper {
+                .basic-info {
+                    h1 {
+                        font-size: larger;
+                        margin: 10px 0 10px 0;
+                    }
+                    table {
+                        width: 100%;
+                        background-color: $white;
+                        border-radius: 10px;
+                        text-align: left;
+                        th, td {
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #profile-bar {
+
+        .container {
+            .profile-bar-wrapper {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .profile-image {
+                    margin: 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .profile-basic-info {
+                    margin: 0;
+                    width: calc(100% / 2 - 2%);
+                    text-align: left;
+                    h1 {
+                    }
+                    p {
+                    }
+                }
+            }
+        }
+    }
+  
+}

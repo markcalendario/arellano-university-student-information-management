@@ -1,0 +1,362 @@
+@import '../../../styles/all.scss';
+@import '../../../styles/sidebar.scss';
+
+
+select {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px $mainAccent solid;
+
+    option {
+        border: 1px $mainAccent solid;
+    }
+}
+
+#grade-management {
+    margin: 30px 0;
+    .container {
+        .wrapper {
+
+            #student-selector {
+                background: $white;
+                width: 100%;
+                height: 300px;
+                border-radius: 5px;
+                @include shadow;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                &::-webkit-scrollbar {
+                    display: none;    
+                }
+
+                .title {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: calc(100% - 20px);
+                    background-color: $white;
+
+                    h1 {
+                        color: $mainAccent;
+                    }
+                }
+
+                .student-list {
+                    margin: 10px 0;
+    
+                    form {
+                        button {
+                            width: 100%;
+                            text-align: left;
+                            padding: 10px;
+                            color: $white;
+                            border: none;
+    
+                            i {
+                                padding-right: 10px;
+                            }
+                        }
+                        
+                        .no-student-to-show {
+                            color: $dangerAccent;
+                            font-weight: bold;
+                        }
+    
+                        .male {
+                            background-color: $mainAccent;
+                        }
+    
+                        .female {
+                            background-color: $dangerAccent;
+                        }
+                    }
+                }
+            }
+
+            #student-information {
+                margin: 50px 0;
+                .wrapper {
+                    .title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 10px 0;
+                        h1 {
+                            font-size: large;
+                            color: $mainAccent;
+                        }
+                    }
+                    table {
+                        width: 100%;
+                        tr {
+                            th, td {
+                                width: calc(100% / 2);
+                                text-align: left;
+                                padding: 10px;
+                            }
+
+                            th {
+                                background-color: $mainAccent;
+                                color: $white;
+                            }
+
+                            td {
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #student-grade {
+                width: 100%;
+                .wrapper {
+
+                    .title {
+                        h1 {
+                            font-size: large;
+                            margin: 10px 0;
+                            color: $mainAccent;
+                        }
+
+                        form {
+                            button, .view-card-button {
+                                color: $white;
+                                padding: 10px;
+                                border-radius: 10px;
+                                border: none;
+
+                                &[name="create-grade-field-prompt"] {
+                                    background-color: $stableAccent;
+                                }
+                            }
+                            .view-card-button {
+                                background-color: $mainAccent;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    table {
+                        margin: 20px 0;
+                        width: 100%;
+                        border-spacing: 0;
+
+                        .sem-title {
+                            text-align: center;
+                        }
+
+                        tr {
+                            th,td {
+                                text-align: left;
+                                padding: 10px 0;
+                                font-size: x-small;
+                                text-align: center;
+                                border: 1px $mainAccent solid;
+                            }
+
+                            .failed, .passed, .incomplete {
+                                font-weight: bold;
+                            }
+
+                            .failed {
+                                color: $dangerAccent;
+                            }
+
+                            .passed {
+                                color: $stableAccent;
+                            }
+
+                            .incomplete {
+                                color: gray;
+                            }
+
+                            .subject-name {
+                                width: calc(50%);
+                            }
+
+                            .small-data {
+                                width: calc(50% / 4);
+                            }
+
+                            th {
+                                background-color: $mainAccent;
+                                color: $white;
+                            }
+
+                            td {
+                                background-color: $white;
+
+                                input[name="grade-period-1"],
+                                input[name="grade-period-2"] {
+                                    border: none;
+                                    border-bottom: 1px $mainAccent solid;
+                                }
+
+                                button[name="edit-grade"] {
+                                    background-color: transparent;
+                                    border: none;
+                                    color: $stableAccent;
+                                    padding: 2px;
+                                }
+
+                                button[name="save-grade"] {
+                                    background-color: transparent;
+                                    border: none;
+                                    color: $mainAccent;
+                                    padding: 2px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+#profile-container-view {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px $mainAccent solid;
+
+    img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #grade-management {
+        margin: 30px 0;
+        .container {
+            .wrapper {
+    
+                #student-selector {
+
+    
+                    &::-webkit-scrollbar {
+  
+                    }
+    
+                    .title {
+
+    
+                        h1 {
+
+                        }
+                    }
+    
+                    .student-list {
+                        margin: 10px 0;
+        
+                        form {
+
+                            button {
+
+        
+                                i {
+
+                                }
+                            }
+        
+                            .male {
+
+                            }
+        
+                            .female {
+
+                            }
+                        }
+                    }
+                }
+    
+                #student-information {
+
+                    .wrapper {
+                        .title {
+
+                            h1 {
+
+                            }
+                        }
+                        table {
+                            width: 100%;
+                            tr {
+                                th, td {
+
+                                }
+    
+                                th {
+
+                                }
+    
+                                td {
+
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                #student-grade {
+
+                    .wrapper {
+    
+                        .title {
+                            h1 {
+
+                            }
+                        }
+    
+                        table {
+
+    
+                            .sem-title {
+
+                            }
+    
+                            tr {
+                                th,td {
+                                    font-size: large;
+                                }
+    
+                                .subject-name {
+                                }
+    
+                                .small-data {
+
+                                }
+    
+                                th {
+
+                                }
+    
+                                td {
+
+                                    button {
+                                        font-size: x-large;
+                                    }
+    
+                                    button[name="edit-grade"] {
+
+                                    }
+    
+                                    button[name="save-grade"] {
+
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+}

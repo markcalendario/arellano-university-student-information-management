@@ -1,0 +1,49 @@
+//
+// RANKING STYLESHEET
+//
+
+@import '../../../styles/all.scss';
+@import '../../../styles/sidebar.scss';
+
+#classmates {
+    margin-top: 30px;
+
+    .container {
+        .wrapper {
+            table {
+                width: 100%;
+                text-align: center;
+
+                th, td {
+                    padding: 10px;
+                }
+
+                th {
+                    color: $white;
+                    background-color: $mainAccent;
+                }
+
+                td {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    table {
+        font-size: 16px !important;
+        input[type="submit"] {
+            font-size: 16px !important;
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+
+
+
+}

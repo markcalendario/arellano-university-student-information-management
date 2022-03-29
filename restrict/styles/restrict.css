@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+
+* ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+* ::-webkit-scrollbar-button {
+  width: 3px;
+  height: 3px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border: 0px none #ffffff;
+  border-radius: 22px;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background: #128ffd;
+}
+
+* ::-webkit-scrollbar-thumb:active {
+  background: #128ff1;
+}
+
+* ::-webkit-scrollbar-track {
+  background: #dad4ff;
+  border: 0px none #ffffff;
+  border-radius: 6px;
+}
+
+* ::-webkit-scrollbar-track:hover {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-track:active {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  background-color: #F1F5F8;
+}
+
+#restriction-page {
+  margin-top: 150px;
+}
+
+#restriction-page .container .wrapper {
+  text-align: center;
+}
+
+#restriction-page .container .wrapper .img-container {
+  width: 250px;
+  margin: auto;
+}
+
+#restriction-page .container .wrapper .img-container img {
+  width: 100%;
+}
+
+#restriction-page .container .wrapper .text-container {
+  margin-top: 30px;
+}
+
+#restriction-page .container .wrapper .text-container h1 {
+  color: #ff1f62;
+}
+
+#restriction-page .container .wrapper form {
+  margin-top: 20px;
+}
+
+#restriction-page .container .wrapper form input {
+  padding: 10px;
+  width: 200px;
+  background-color: royalblue;
+  border: none;
+  padding: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/*# sourceMappingURL=restrict.css.map */

@@ -1,0 +1,328 @@
+@import '../../../styles/all.scss';
+@import '../../../styles/sidebar.scss';
+
+.pagination {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    a {
+        padding: 10px;
+        border: 1px $mainAccent solid;
+        color: $charcoal;
+        text-decoration: none;
+        margin: 10px 0;
+    }
+
+    a:hover {
+        background-color: $mainAccent;
+        color: $white;
+    }
+
+    .active {
+        background-color: $mainAccent;
+        color: $white;
+        cursor: not-allowed;
+    }
+
+    .control {
+        background-color: $mainAccent;
+        color: $white;
+    }
+
+}
+
+#filters {
+    margin-top: 30px;
+    .container {
+        .filters-wrapper {
+            h1 {
+                color: $mainAccent;
+            }
+            .filters-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                border-radius: 10px;
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-align: center;
+                    margin-top: 10px;
+                    animation-name: strandColorsAnimate;
+                    animation-duration: 1s;
+                    background-color: rgba($mainAccent, 0.050);
+                    color: $mainAccent;
+                    @keyframes strandColorsAnimate {
+                        from {transform: rotate(10deg);}
+                        50% {transform: rotate(15deg);}
+                        to {transform: rotate(0deg);}
+                    }
+                }
+            }
+        }
+    }
+}
+
+#search {
+    margin-top: 30px;
+    .container {
+        .search-wrapper {
+            background-color: $white;
+            @include shadow();
+            padding: 10px;
+            border-radius: 10px;
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: transparent;
+                }
+                .search-button-container {
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        i {
+                            padding: 10px;
+                            background-color: $whiteAccent;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.indicator {
+    .inactive-indicator {
+        background-color: rgba($dangerAccent, 0.3);
+        box-shadow: inset 0px 0px 0px 2px $dangerAccent;
+    }
+    .active-indicator {
+        background-color: rgba($mainAccent, 0.3);
+        box-shadow: inset 0px 0px 0px 2px $mainAccent;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        color: $white;
+    }
+
+    .active-icon {
+        padding: 10px;
+        background-color: $mainAccent;
+        color: $white;
+
+        i {
+            font-size: x-large;
+        }
+    }
+
+    .inactive-icon {
+        padding: 10px;
+        background-color: $dangerAccent;
+        color: $white;
+
+        i {
+            font-size: x-large;
+        }
+    }
+    .text {
+        margin-left: 10px;
+        h3 {
+            font-size: small;
+        }
+    }
+}
+
+#teachers-list {
+    margin-top: 30px;
+    .container {
+        .teachers-list-wrapper {
+
+            .inactive {
+                border: 1px $dangerAccent solid;
+                border-left: 20px $dangerAccent solid;
+            }
+
+            .teacher-bar {
+                background: $white;
+                @include shadow();
+                padding: 10px;
+                text-align: center;
+                margin-top: 15px;
+
+                .user-profile-wrap {
+                    .profile-container {
+                        overflow: hidden;
+                        width: 70px;
+                        border-radius: 50%;
+                        height: 70px;
+                        margin: auto;
+                        @include shadow;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .teacher-control {
+
+                    .teacher-info {
+                        margin-top: 10px;
+                        width: 70%;
+                        margin: auto;
+                        text-align: center;
+    
+                        h1 {
+                            line-height: 50px;
+                        }
+    
+                        input[name="edited-teacher-firstname"], input[name="edited-teacher-lastname"] {
+                            border: none;
+                            border-bottom: 2px $mainAccent solid;
+                            padding: 10px;
+                            margin: 10px auto 10px auto;
+                            width: 100%;
+                            font-weight: bold;
+                            font-size: 16px;
+                            background-color: transparent;
+                        }
+
+                    }
+
+                    button {
+                        border: none;
+                        width: calc(100% / 2 - 2%);
+                        color: white;
+                        border-radius: 10px;
+                        padding: 5px;
+                        font-size: large;
+                        cursor: pointer;
+
+                        &[name="teacher-delete"] {
+                            background: transparent;
+                            color: $dangerAccent;
+                        }
+                        &[name="teacher-reactivate"] {
+                            background-color: $mainAccent;
+                        }
+                        &[name="teacher-edit-save"] {
+                            background: $mainAccent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+#show-active-teachers-list {
+    margin: 50px auto;
+    .container {
+        .wrapper {
+            a {
+                display: flex;
+                align-items: center;
+                background-color: $mainAccent;
+                text-decoration: none;
+                @include shadow;
+
+                i {
+                    padding: 30px;
+                    color: $white;
+                    font-size: xx-large;
+                }
+
+                h3 {
+                    padding-left: 20px;
+                    color: $white;
+                    text-transform: uppercase;
+                }
+
+                &:hover {
+                    transform: scale(0.99);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #teachers-list {
+        .container {
+            .teachers-list-wrapper {
+                .teacher-bar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    div, form {
+                        width: calc(100% / 3 - 3%);
+                    }
+    
+                    .user-profile-wrap {
+                        width: 20%;
+                        .profile-container {
+                            img {
+    
+                            }
+                        }
+                    }
+    
+                    .teacher-control {
+                            margin: 0;
+                            justify-content: center;
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+
+                        .teacher-info {
+                            margin: 0;
+                            h1 {
+                                text-align: center;
+                            }
+
+                            input[name="edited-teacher-firstname"], input[name="edited-teacher-lastname"] {
+                                border: none;
+                                border-bottom: 2px $mainAccent solid;
+                                padding: 10px;
+                                margin: 10px auto 10px auto;
+                                width: 50%;
+                                font-weight: bold;
+                                font-size: 16px;
+                                background-color: transparent;
+                            }
+
+                        }
+                        
+            
+                        button {
+                            width: 20%;
+                            margin-left: 10px;
+    
+                            &[name="teacher-view"] {
+    
+                            }
+                            &[name="teacher-edit"] {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

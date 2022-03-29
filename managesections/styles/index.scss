@@ -1,0 +1,247 @@
+@import '../../styles/all.scss';
+@import '../../styles/sidebar.scss';
+
+.highlight {
+    background-color: $mainAccent;
+    color: $white;
+}
+
+#filters {
+    margin-top: 30px;
+    .container {
+        .filters-wrapper {
+            h1 {
+                color: $mainAccent;
+            }
+            .filters-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                border-radius: 10px;
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-align: center;
+                    margin-top: 10px;
+                    animation-name: strandOrders;
+                    animation-duration: 1s;
+                    background-color: rgba($mainAccent, 0.050);
+                    color: $mainAccent;
+                    @keyframes strandOrders {
+                        from {transform: rotate(10deg);}
+                        50% {transform: rotate(15deg);}
+                        to {transform: rotate(0deg);}
+                    }
+                }
+            }
+        }
+    }
+}
+
+#search {
+    margin-top: 30px;
+    .container {
+        .search-wrapper {
+            background-color: $white;
+            @include shadow();
+            padding: 10px;
+            border-radius: 10px;
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: transparent;
+                }
+                .search-button-container {
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        i {
+                            padding: 10px;
+                            background-color: $whiteAccent;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#sections-list {
+    margin-top: 30px;
+    .container {
+        .sections-list-wrapper {
+
+            .section-active {
+                border-top: 10px $mainAccent solid;
+                color: $mainAccent;
+            }
+            .section-inactive {
+                border-top: 10px $dangerAccent solid;
+                color: $dangerAccent;
+            }
+
+            .section-card {
+    
+                background-color: $white;
+                @include shadow();
+                border-radius: 10px;
+                padding: 10px;
+                text-align: center;
+                margin-bottom: 40px;
+                animation: cardAnimate 0.5s;
+                
+
+                @keyframes cardAnimate {
+                    from {
+                        transform: scale(0.9);
+                    }
+
+                    50% {
+                        transform: scale(1.05);
+                    }
+                    to {
+                        transform: scale(1);
+                    }
+                }
+
+                h1 {
+                    margin-bottom: 10px;
+                    font-size: xx-large;
+                }
+
+                .section-info {
+                    p {
+                        padding: 5px;
+                    }
+                }
+                #add-section-form {
+                    .add-icon {
+                        font-size: large;
+                        padding: 15px;
+                        width: 15px;
+                        height: 15px;
+                        margin: auto;
+                        border-radius: 50%;
+                        color: $mainAccent;
+                        background-color: rgba($mainAccent, 0.050);
+                    }
+
+                    margin: 0;
+                    flex-direction: column;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    input[type="text"], select {
+                        padding: 5px;
+                        border: 0.5px $mainAccent solid;
+                        background-color: transparent;
+                    }
+
+                    button {
+                        background-color: transparent;
+                        margin: auto;
+                    }
+                    
+                }
+
+                form {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-around;
+
+                    button {
+                        width: calc(100% / 2 - 2%);
+                        border: none;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 10px;
+                        cursor: pointer;
+
+                        i {
+                            font-size: x-large;
+                        }
+
+                        &[name="section-view"] {
+                            background: $mainAccent;
+                        }
+
+                        &[name="section-edit"] {
+                            background: $stableAccent;
+                        }
+
+                        &[name="section-deactivate"] {
+                            background: $whiteAccent;
+                            color: $dangerAccent;
+                        }
+
+                        &[name="section-activate"] {
+                            background: $whiteAccent;
+                            color: $stableAccent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #sections-list {
+
+        .container {
+            .sections-list-wrapper {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .section-card {
+                    width: 270px;
+                    margin-bottom: 40px;
+
+                    h1 {
+
+                    }
+    
+                    .section-info {
+                        p {
+
+                        }
+                    }
+                    form {
+
+    
+                        button {
+    
+                            i {
+                              
+                            }
+    
+                            &[name="section-view"] {
+                               
+                            }
+    
+                            &[name="section-edit"] {
+                                
+                            }
+    
+                            &[name="section-delete"] {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

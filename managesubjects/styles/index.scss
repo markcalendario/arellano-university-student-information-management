@@ -1,0 +1,119 @@
+@import '../../styles/all.scss';
+@import '../../styles/sidebar.scss';
+
+#search {
+    margin-top: 30px;
+    .container {
+        .search-wrapper {
+            background-color: $white;
+            @include shadow();
+            padding: 10px;
+            border-radius: 10px;
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: transparent;
+                }
+                .search-button-container {
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        i {
+                            padding: 10px;
+                            background-color: $whiteAccent;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#subjects-list {
+    margin: 50px 0;
+
+    .container {
+        .wrapper {
+            width: 100%;
+
+            #table-control {
+                margin: 20px 0;
+                button {
+                    padding: 15px;
+                    color: $white;
+                    border-radius: 10px;
+                    border: 0;
+                }
+
+                button[name="cancel"] {
+                    background-color: $dangerAccent;
+                }
+
+                button[name="add-subject-prompt"] {
+                    background-color: $stableAccent;
+                }
+            }
+
+            table {
+                width: 100%;
+                border-spacing: 0;
+
+                tr {
+
+                    th, td {
+                        padding: 10px;
+                        width: calc(100% / 3);
+                        font-size: medium;
+                        border-bottom: 1px $mainAccent solid;
+                        text-align: left;
+                    }
+
+                    th {
+                        color: $white;
+                        background-color: $mainAccent;
+                    }
+
+                    td {
+                        background-color: $white;
+
+                        input[type="text"], select{
+                            border: 0;
+                            border-bottom: 1px $mainAccent solid;
+                        }
+
+                        button {
+                            width: 50px;
+                            padding: 5px;
+                            background-color: $whiteAccent;
+                            border: 0;
+                        }
+
+                        button[name="edit-subject"] {
+                            color: $stableAccent;
+                        }
+
+                        button[name="save-subject"] {
+                            color: $mainAccent;
+                        }
+                        button[name="delete-subject-prompt"] {
+                            color: $dangerAccent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+
+    
+}

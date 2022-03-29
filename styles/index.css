@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+
+* ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+* ::-webkit-scrollbar-button {
+  width: 3px;
+  height: 3px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border: 0px none #ffffff;
+  border-radius: 22px;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background: #128ffd;
+}
+
+* ::-webkit-scrollbar-thumb:active {
+  background: #128ff1;
+}
+
+* ::-webkit-scrollbar-track {
+  background: #dad4ff;
+  border: 0px none #ffffff;
+  border-radius: 6px;
+}
+
+* ::-webkit-scrollbar-track:hover {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-track:active {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  background-color: #F1F5F8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+*:focus {
+  outline: none;
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: royalblue;
+  z-index: 100;
+  -webkit-transition: none;
+  transition: none;
+  text-align: center;
+}
+
+#loader .container .wrapper {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+
+#loader .container .wrapper img {
+  width: 100px;
+  -webkit-animation: animateLogo 2s infinite;
+          animation: animateLogo 2s infinite;
+}
+
+#loader .container .wrapper h4, #loader .container .wrapper p {
+  margin: 10px auto;
+  color: #FFFFFF;
+}
+
+#loader .container .wrapper p {
+  font-size: xx-small;
+  font-family: monospace;
+}
+
+#loader .container .wrapper .spinner {
+  color: #FFFFFF;
+}
+
+@-webkit-keyframes animateLogo {
+  from {
+  }
+  100% {
+    -webkit-transform: rotateY(359deg);
+            transform: rotateY(359deg);
+  }
+}
+
+@keyframes animateLogo {
+  from {
+  }
+  100% {
+    -webkit-transform: rotateY(359deg);
+            transform: rotateY(359deg);
+  }
+}
+
+body {
+  background-color: #F1F5F8;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #FFFFFF;
+  color: #252525;
+  padding: 30px 0 30px 0;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header nav .container .ausms-top {
+  text-align: center;
+}
+
+header nav .container .ausms-top .au-logo-top {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: auto;
+  -webkit-animation: headerLogoAnimation;
+          animation: headerLogoAnimation;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+header nav .container .ausms-top .au-logo-top img {
+  width: 100%;
+}
+
+header nav .container .ausms-top .ausms-top-texter {
+  -webkit-animation: headerTextAnimation;
+          animation: headerTextAnimation;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes headerLogoAnimation {
+  from {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    width: 200px;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+}
+
+@keyframes headerLogoAnimation {
+  from {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    width: 200px;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+}
+
+@-webkit-keyframes headerTextAnimation {
+  from {
+    letter-spacing: 10px;
+  }
+  to {
+    letter-spacing: normal;
+  }
+}
+
+@keyframes headerTextAnimation {
+  from {
+    letter-spacing: 10px;
+  }
+  to {
+    letter-spacing: normal;
+  }
+}
+
+#loginUI {
+  margin-top: 100px;
+}
+
+#loginUI .loginUI-right-text {
+  padding: 0 0 20px 0;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-left .loginUI-left-image {
+  width: 300px;
+  margin: auto;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-left .loginUI-left-image img {
+  width: 100%;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-left .loginUI-left-text {
+  padding: 15px 0 15px 0;
+  text-align: center;
+  color: #252525;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right {
+  color: #252525;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-text {
+  text-align: center;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel {
+  padding: 30px 0 30px 0;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  width: 100%;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .incorrect-creds {
+  padding: 10px;
+  color: #FFFFFF;
+  border: 1px #ff1f62 solid;
+  border-radius: 10px;
+  background-color: rgba(255, 31, 98, 0.5);
+  -webkit-animation-name: incorrect;
+          animation-name: incorrect;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+@-webkit-keyframes incorrect {
+  from {
+    -webkit-transform: rotate(1.2deg);
+            transform: rotate(1.2deg);
+    background-color: #FFFFFF;
+  }
+  50% {
+    -webkit-transform: rotate(-1.2deg) scale(1.2);
+            transform: rotate(-1.2deg) scale(1.2);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes incorrect {
+  from {
+    -webkit-transform: rotate(1.2deg);
+            transform: rotate(1.2deg);
+    background-color: #FFFFFF;
+  }
+  50% {
+    -webkit-transform: rotate(-1.2deg) scale(1.2);
+            transform: rotate(-1.2deg) scale(1.2);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .attempt-text {
+  margin-top: 10px;
+  color: #ff1f62;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .input-contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  background-color: #F1F5F8;
+  margin: 10px 0 10px 0;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .input-contain .input-wrap {
+  padding: 10px 0 0 0;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .input-contain .input-wrap input {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  width: calc(100% - 50px);
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .input-contain .input-wrap #eye {
+  float: right;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .loginUI-buttons input, #loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .loginUI-buttons .attempt-reach {
+  border: none;
+  background-color: royalblue;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .loginUI-buttons input:hover, #loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .loginUI-buttons .attempt-reach:hover {
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+#loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel .container form .loginUI-buttons .attempt-reach {
+  background-color: #ff1f62;
+  cursor: not-allowed;
+}
+
+#home-of-the-chiefs {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  -webkit-transform: skew(0, -3deg);
+          transform: skew(0, -3deg);
+  margin-top: 100px;
+  background-size: cover;
+  background-image: url("../assets/images/home of the chiefs/basketball.jpg");
+  background-repeat: no-repeat;
+  border-top: 20px royalblue solid;
+  border-bottom: 20px royalblue solid;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#home-of-the-chiefs .container {
+  -webkit-transform: skew(0, 3deg);
+          transform: skew(0, 3deg);
+}
+
+#home-of-the-chiefs .container .home-of-the-chiefs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 600px;
+  padding: 20px 0 20px 0;
+}
+
+#home-of-the-chiefs .container .home-of-the-chiefs-wrapper .home-of-the-chiefs-images img {
+  width: 200px;
+}
+
+#home-of-the-chiefs .container .home-of-the-chiefs-wrapper .home-of-the-chiefs-texter {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#home-of-the-chiefs .container .home-of-the-chiefs-wrapper .home-of-the-chiefs-texter h1 {
+  font-size: 50px;
+  color: #FFFFFF;
+  padding: 20px 0 20px 0;
+}
+
+#home-of-the-chiefs .container .home-of-the-chiefs-wrapper .home-of-the-chiefs-texter h3 {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+#about-us {
+  margin-top: 100px;
+  color: #252525;
+}
+
+#about-us .container .about-us-texter {
+  text-align: center;
+  color: #252525;
+  margin: 20px 0 50px 0;
+}
+
+#about-us .container .about-us-texter h1 {
+  padding: 10px 0 10px 0;
+  font-size: xx-large;
+}
+
+#about-us .container .about-us-wrapper .about-card {
+  margin: 20px auto 20px auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#about-us .container .about-us-wrapper .about-card .about-card-top {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+#about-us .container .about-us-wrapper .about-card .about-card-top img {
+  width: 100%;
+}
+
+#about-us .container .about-us-wrapper .about-card .about-card-content .container {
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#about-us .container .about-us-wrapper .about-card .about-card-content .container h2 {
+  padding: 0 0 10px 0;
+  color: royalblue;
+}
+
+#au-history {
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2148bd), to(#6488f5));
+  background-image: linear-gradient(to right, #2148bd, #6488f5);
+  margin-top: 100px;
+  -webkit-transform: skew(0, -3deg);
+          transform: skew(0, -3deg);
+  color: #FFFFFF;
+  border-top: 20px #ff1f62 solid;
+  border-bottom: 20px #ff1f62 solid;
+}
+
+#au-history .container {
+  background-image: url(../assets/images/index/dust.png);
+  -webkit-transform: skew(0, 3deg);
+          transform: skew(0, 3deg);
+}
+
+#au-history .container .au-history-wrapper {
+  padding: 50px 0 50px 0;
+}
+
+#au-history .container .au-history-wrapper .au-history-title {
+  text-align: center;
+}
+
+#au-history .container .au-history-wrapper .au-history-title h1 {
+  font-size: xx-large;
+}
+
+#au-history .container .au-history-wrapper .au-history {
+  margin: 50px 0 50px 0;
+}
+
+#au-history .container .au-history-wrapper .au-history .history-image {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+#au-history .container .au-history-wrapper .au-history p {
+  padding: 50px 0 50px 0;
+  text-align: center;
+}
+
+#au-tagline {
+  margin: 100px auto;
+}
+
+#au-tagline .container {
+  text-align: center;
+}
+
+#au-tagline .container h1 {
+  font-size: xx-large;
+  color: #252525;
+}
+
+footer {
+  background-color: #252525;
+}
+
+footer .container .foot-title {
+  text-align: center;
+}
+
+footer .container .foot-title img {
+  width: 250px;
+  padding: 30px 0;
+  margin: auto;
+}
+
+footer .container .foot-wrapper {
+  color: #F1F5F8;
+  padding: 20px 0 20px 0;
+}
+
+footer .container .foot-wrapper .foot-left ul h3, footer .container .foot-wrapper .foot-middle ul h3, footer .container .foot-wrapper .foot-right ul h3 {
+  padding: 10px 0 10px 0;
+}
+
+footer .container .foot-wrapper .foot-left ul li, footer .container .foot-wrapper .foot-middle ul li, footer .container .foot-wrapper .foot-right ul li {
+  list-style: none;
+  padding: 10px 0 10px 20px;
+}
+
+footer .container .foot-bottom {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+footer .container .foot-title {
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  #loginUI .container .loginUI-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #loginUI .container .loginUI-wrapper .loginUI-left {
+    width: 100%;
+  }
+  #loginUI .container .loginUI-wrapper .loginUI-right {
+    width: 100%;
+  }
+  #loginUI .container .loginUI-wrapper .loginUI-right .loginUI-right-login-panel {
+    width: 400px;
+    margin: auto;
+  }
+  #about-us .container {
+    width: 100%;
+  }
+  #about-us .container .about-us-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #about-us .container .about-us-wrapper .about-card {
+    width: 280px;
+  }
+  #au-history .container .au-history-wrapper .history-invert {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  #au-history .container .au-history-wrapper .au-history {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin: 100px auto 50px auto;
+  }
+  #au-history .container .au-history-wrapper .au-history p {
+    width: 50%;
+    text-align: left;
+  }
+  footer .container .foot-title img {
+    width: 400px;
+  }
+  footer .container .foot-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+/*# sourceMappingURL=index.css.map */

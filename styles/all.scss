@@ -1,0 +1,110 @@
+
+// ==========
+// COLORS
+// ==========
+
+$white: #FFFFFF;
+$whiteAccent: #F1F5F8;
+$whiteBluish: #f6f8ff;
+$mainAccent: royalblue;
+$stableAccent: rgb(0, 167, 0);
+$dangerAccent: rgb(255, 31, 98);
+$grayAccent: lightgray;
+$warningAccent: orange;
+$charcoal: rgb(37, 37, 37);
+$separatorLine: rgba(0, 0, 0, 0.100);
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+      ::-webkit-scrollbar-button {
+        width: 3px;
+        height: 3px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #007bff;
+        border: 0px none #ffffff;
+        border-radius: 22px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #128ffd;
+      }
+      ::-webkit-scrollbar-thumb:active {
+        background: #128ff1;
+      }
+      ::-webkit-scrollbar-track {
+        background: #dad4ff;
+        border: 0px none #ffffff;
+        border-radius: 6px;
+      }
+      ::-webkit-scrollbar-track:hover {
+        background: #cccbff;
+      }
+      ::-webkit-scrollbar-track:active {
+        background: #cccbff;
+      }
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+
+      outline: none;
+}
+
+body {
+  background-color: $whiteAccent;
+}
+
+// ==========
+// MIXINS
+// ==========
+
+@mixin shadow {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@mixin primaryButton {
+    border: none;
+    background-color: $mainAccent;
+    border-radius: 5px;
+    @include shadow();
+    color: $white;
+    cursor: pointer;
+}
+
+@mixin buttonTransition {
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.99);
+}
+
+@mixin transparentText($color) {
+    color: rgba($color, 0.700);
+}
+
+
+// ==========
+// BORDERS
+// ==========
+
+@mixin leftBorder($color) {
+    border-left: 5px $color solid;
+}
+
+// ==========
+// BUTTONS
+// ==========
+
+@mixin button($color) {
+    background-color: $color;
+    border: none;
+    padding: 10px;
+    color: $white;
+    cursor: pointer;
+    border-radius: 10px;
+}

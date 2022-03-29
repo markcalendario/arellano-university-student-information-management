@@ -1,0 +1,143 @@
+@import '../../../styles/all.scss';
+@import '../../../styles/sidebar.scss';
+
+
+
+#adviser {
+    margin-top: 30px;
+    .container {
+        .wrapper {
+            h1 {
+                color: $mainAccent;
+            }
+        }
+    }
+}
+
+#filters {
+    margin-top: 30px;
+    .container {
+        .filters-wrapper {
+            h1 {
+                color: $mainAccent;
+            }
+            .filters-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                border-radius: 10px;
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-align: center;
+                    margin-top: 10px;
+                    animation-name: strandColorsAnimate;
+                    animation-duration: 1s;
+                    background-color: rgba($mainAccent, 0.050);
+                    color: $mainAccent;
+                    @keyframes strandColorsAnimate {
+                        from {transform: rotate(10deg);}
+                        50% {transform: rotate(15deg);}
+                        to {transform: rotate(0deg);}
+                    }
+                }
+            }
+        }
+    }
+}
+
+#search {
+    margin-top: 30px;
+    .container {
+        .search-wrapper {
+            background-color: $white;
+            @include shadow();
+            padding: 10px;
+            border-radius: 10px;
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: transparent;
+                }
+                .search-button-container {
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        i {
+                            padding: 10px;
+                            background-color: $whiteAccent;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#student-list {
+    margin-top: 30px;
+    .container {
+        .student-list-wrapper {
+            table {
+                width: 100%;
+                font-size: xx-small;
+                border-spacing: 0;
+                border: 1px $mainAccent solid;
+                th {
+                    background-color: $mainAccent;
+                    color: $white;
+                    padding: 10px;
+                    border: 1px $mainAccent solid;
+                }
+                td {
+                    padding: 10px;
+                    background: $white;
+                    text-align: center;
+                    border: 1px $mainAccent solid;
+                }
+                button {
+                    background-color: transparent;
+                    border: none;
+                    &[name="view-student"] {
+                        color: $stableAccent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #student-list {
+        .container {
+            .student-list-wrapper {
+                table {
+                    font-size: large;
+                    th {
+                    }
+                    td {
+                    }
+                    button {
+                        font-size: large;
+                        cursor: pointer;
+                        padding: 10px;
+                        &[name="view-student"] {
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

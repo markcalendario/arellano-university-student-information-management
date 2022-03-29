@@ -1,0 +1,148 @@
+@import '../../styles/all.scss';
+@import '../../styles/sidebar.scss';
+
+
+#filters {
+    margin-top: 30px;
+    .container {
+        .filters-wrapper {
+            h1 {
+                color: $mainAccent;
+            }
+            .filters-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                border-radius: 10px;
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-align: center;
+                    margin-top: 10px;
+                    animation-name: strandColorsAnimate;
+                    animation-duration: 1s;
+                    background-color: rgba($mainAccent, 0.050);
+                    color: $mainAccent;
+                    @keyframes strandColorsAnimate {
+                        from {transform: rotate(10deg);}
+                        50% {transform: rotate(15deg);}
+                        to {transform: rotate(0deg);}
+                    }
+                }
+            }
+        }
+    }
+}
+
+#search {
+    margin-top: 30px;
+    .container {
+        .search-wrapper {
+            background-color: $white;
+            @include shadow();
+            padding: 10px;
+            border-radius: 10px;
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: transparent;
+                }
+                .search-button-container {
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        i {
+                            padding: 10px;
+                            background-color: $whiteAccent;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#student-list {
+    margin: 30px auto;
+    .container {
+        .wrapper {
+            width: 100%;
+            table {
+                width: 100%;
+                border-spacing: 5px;
+
+                tr {
+                    th, td {
+                        padding: 10px;
+                        width: calc(100% / 3);
+                        font-size: 10px;
+                    }
+
+                    td {
+                        background: $white;
+                        border: 1px $dangerAccent solid;
+
+                        button {
+                            border: none;
+                            width: calc(100% - 1%);
+                            padding: 10px;
+                            border-radius: 10px;
+                            color: $white;
+                        }
+
+                        button[name="delete-student-prompt"] {
+                            background-color: $dangerAccent;
+                        }
+
+                        button[name="reactivate-student"] {
+                            background-color: $mainAccent;
+                        }
+                    }
+    
+                    th {
+                        background-color: $dangerAccent;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #student-list {
+        .container {
+            .wrapper {
+                width: 100%;
+                table {
+    
+                    tr {
+                        th, td {
+                            font-size: 16px;
+                        }
+    
+                        td {
+    
+                            button[name="delete-student-prompt"] {
+                            }
+                        }
+        
+                        th {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

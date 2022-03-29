@@ -1,0 +1,84 @@
+@import '../styles/all.scss';
+
+#popup {
+    position: fixed;
+    left: 50%;
+    z-index: 1;
+    width: 80%;
+    transform: translateY(-200px);
+    visibility: hidden;
+    margin: auto;
+    background-color: $charcoal;
+    @include shadow();
+    padding: 20px;
+    animation: popupAnimation;
+    animation-duration: 3.5s;
+    flex-wrap: wrap;
+    border-radius: 10px;
+
+    .container {
+        .wrapper {
+            display: flex;
+            color: $white;
+            align-items: center;
+            justify-content: left;
+
+            .popup-icon {
+                font-size: 40px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    @keyframes popupAnimation {
+        from {
+            transform: translate(-50%, -50px) scale(0.8);
+            visibility: visible;
+            overflow: hidden;
+        }
+        
+        8% {
+            transform: translate(-50%, 20px) scale(0.8);
+            overflow: hidden;
+        }
+
+        15% {
+            transform: translate(-50%, 20px) scale(1);
+        }
+
+        85% {
+            transform: translate(-50%, 20px) scale(1);
+        }
+
+        90% {
+            transform: translate(-50%, 20px) scale(0.8);
+        }
+
+        to {
+            transform: translate(-50%, -150px) scale(0.8);
+            visibility: visible;
+        }
+    }
+
+    .fa-times-circle {
+        color: $dangerAccent;
+    }
+
+    .fa-check-circle {
+        color: $stableAccent;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #popup {
+        width: 500px;
+    
+        .container {
+            .wrapper {
+    
+                .popup-icon {
+                }
+            }
+        }
+    }
+}

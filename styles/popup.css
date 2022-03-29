@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+
+* ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+* ::-webkit-scrollbar-button {
+  width: 3px;
+  height: 3px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border: 0px none #ffffff;
+  border-radius: 22px;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background: #128ffd;
+}
+
+* ::-webkit-scrollbar-thumb:active {
+  background: #128ff1;
+}
+
+* ::-webkit-scrollbar-track {
+  background: #dad4ff;
+  border: 0px none #ffffff;
+  border-radius: 6px;
+}
+
+* ::-webkit-scrollbar-track:hover {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-track:active {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  background-color: #F1F5F8;
+}
+
+#popup {
+  position: fixed;
+  left: 50%;
+  z-index: 1;
+  width: 80%;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+  visibility: hidden;
+  margin: auto;
+  background-color: #252525;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 20px;
+  -webkit-animation: popupAnimation;
+          animation: popupAnimation;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+#popup .container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+#popup .container .wrapper .popup-icon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+@-webkit-keyframes popupAnimation {
+  from {
+    -webkit-transform: translate(-50%, -50px) scale(0.8);
+            transform: translate(-50%, -50px) scale(0.8);
+    visibility: visible;
+    overflow: hidden;
+  }
+  8% {
+    -webkit-transform: translate(-50%, 20px) scale(0.8);
+            transform: translate(-50%, 20px) scale(0.8);
+    overflow: hidden;
+  }
+  15% {
+    -webkit-transform: translate(-50%, 20px) scale(1);
+            transform: translate(-50%, 20px) scale(1);
+  }
+  85% {
+    -webkit-transform: translate(-50%, 20px) scale(1);
+            transform: translate(-50%, 20px) scale(1);
+  }
+  90% {
+    -webkit-transform: translate(-50%, 20px) scale(0.8);
+            transform: translate(-50%, 20px) scale(0.8);
+  }
+  to {
+    -webkit-transform: translate(-50%, -150px) scale(0.8);
+            transform: translate(-50%, -150px) scale(0.8);
+    visibility: visible;
+  }
+}
+
+@keyframes popupAnimation {
+  from {
+    -webkit-transform: translate(-50%, -50px) scale(0.8);
+            transform: translate(-50%, -50px) scale(0.8);
+    visibility: visible;
+    overflow: hidden;
+  }
+  8% {
+    -webkit-transform: translate(-50%, 20px) scale(0.8);
+            transform: translate(-50%, 20px) scale(0.8);
+    overflow: hidden;
+  }
+  15% {
+    -webkit-transform: translate(-50%, 20px) scale(1);
+            transform: translate(-50%, 20px) scale(1);
+  }
+  85% {
+    -webkit-transform: translate(-50%, 20px) scale(1);
+            transform: translate(-50%, 20px) scale(1);
+  }
+  90% {
+    -webkit-transform: translate(-50%, 20px) scale(0.8);
+            transform: translate(-50%, 20px) scale(0.8);
+  }
+  to {
+    -webkit-transform: translate(-50%, -150px) scale(0.8);
+            transform: translate(-50%, -150px) scale(0.8);
+    visibility: visible;
+  }
+}
+
+#popup .fa-times-circle {
+  color: #ff1f62;
+}
+
+#popup .fa-check-circle {
+  color: #00a700;
+}
+
+@media screen and (min-width: 768px) {
+  #popup {
+    width: 500px;
+  }
+}
+/*# sourceMappingURL=popup.css.map */

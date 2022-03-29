@@ -1,0 +1,243 @@
+@import 'all.scss';
+
+.show-side-bar {
+    color: $mainAccent;
+    background-color: transparent;
+    border: 10px;
+}
+
+.side-bar-close {
+    padding: 10px;
+    float: left;
+    margin-bottom: 50px;
+}
+
+#main-UI {
+
+    .sidebar-pane {
+        display: none;
+        z-index: 1;
+        @include shadow();
+        background-color: $white;
+        width: 250px;
+        position: fixed;
+        height: 100%;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        animation: sideBarAnimationOpen 1s;
+
+        .container-fluid {
+            .sidebar-pane-wrapper {
+                padding: 30px 0 20px 0;
+                .sidebar-pane-userinfo {
+                    margin-left: 10px;
+                    background-color: $whiteAccent;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                    padding: 10px 0 10px 0;
+                    color: $mainAccent;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .sidebar-pane-userinfo-profile-container {
+                        width: 40px;
+                        height: 40px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .sidebar-pane-userinfo-name {
+                        width: 70%;
+                        h4 {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+                .sidebar-pane-lists {
+                    margin-left: 10px;
+                    margin-top: 50px;
+                    .container-fluid {
+                        color: $mainAccent;
+                        .list-title {
+                            margin-bottom: 20px;
+                        }
+                        .active-link {
+                            background-color: $whiteAccent;
+                        }
+                        .sidebar-link {
+                            margin: 10px 0 10px 0;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            border-top-left-radius: 30px;
+                            border-bottom-left-radius: 30px; 
+                            a { 
+                                padding: 20px 0 20px 20px;
+                                display: block;
+                                text-decoration: none;
+                                color: $charcoal;
+                                i {
+                                    color: $mainAccent;
+                                }
+                                span {
+                                    padding-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes sideBarAnimationOpening {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+
+        }
+    }
+
+    @keyframes sideBarAnimationClosing {
+        from {
+
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .main-pane {
+        nav {
+
+            color: $charcoal;
+            .container {
+                .main-pane-topper {
+                    padding: 20px 0 20px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .topper-left {
+                        h1 {
+                            color: $mainAccent;
+                            font-size: x-large;
+                        }
+                    }
+                    .topper-right {
+                        width: 70px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        i {
+                            font-size: large;
+                        }
+                        .fa-envelope {
+                            color: $mainAccent;
+                        }
+                        .fa-sign-out {
+                            color: $dangerAccent;
+                        }
+                        button {
+                            border: none;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .side-bar-close {
+        display: none;
+    }
+
+    #main-UI {
+        .sidebar-pane {
+            display: block;
+        }
+    
+        .main-pane {
+            margin-left: 250px;
+            nav {
+                color: $charcoal;
+                .container {
+                    .main-pane-topper {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+
+    #main-UI {
+        .sidebar-pane {
+            width: 80px;
+            .container-fluid {
+                .sidebar-pane-wrapper {
+                    .sidebar-pane-userinfo {
+                        padding: 0;
+                        border-radius: 0;
+                        margin: 0;
+                        background-color: transparent;
+                        margin-left: 10px;
+                        padding-left: 10px;
+                        .sidebar-pane-userinfo-profile-container {
+                            width: 70px;
+                        }
+                        .sidebar-pane-userinfo-name {
+        
+                            h4, p {
+                                display: none;
+                            }
+                        }
+                    }
+                    .sidebar-pane-lists {
+                        .container-fluid {
+                            .list-title {
+                                display: none;
+                            }
+                            .active-link {    
+                            }
+                            .sidebar-link {
+                                margin: 0;
+                                a {
+                                    span {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .main-pane {
+            margin-left: 80px;
+            nav {
+                color: $charcoal;
+                .container {
+                    .main-pane-topper {
+
+                    }
+                }
+            }
+        }
+    }
+}
+

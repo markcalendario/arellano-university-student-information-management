@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+
+* ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+* ::-webkit-scrollbar-button {
+  width: 3px;
+  height: 3px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border: 0px none #ffffff;
+  border-radius: 22px;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background: #128ffd;
+}
+
+* ::-webkit-scrollbar-thumb:active {
+  background: #128ff1;
+}
+
+* ::-webkit-scrollbar-track {
+  background: #dad4ff;
+  border: 0px none #ffffff;
+  border-radius: 6px;
+}
+
+* ::-webkit-scrollbar-track:hover {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-track:active {
+  background: #cccbff;
+}
+
+* ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  background-color: #F1F5F8;
+}
+
+.modal-overlay {
+  background-color: rgba(37, 37, 37, 0.5);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 2;
+}
+
+.modal-overlay .edit-student-modal {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.modal-overlay #modal {
+  width: 80%;
+  margin: auto;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-animation-name: modalAnimation;
+          animation-name: modalAnimation;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+
+.modal-overlay #modal .container-fluid .wrapper {
+  text-align: center;
+}
+
+.modal-overlay #modal .container-fluid .wrapper .edit-field-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-overlay #modal .container-fluid .wrapper .edit-field-container input[type="text"], .modal-overlay #modal .container-fluid .wrapper .edit-field-container input[type="date"], .modal-overlay #modal .container-fluid .wrapper .edit-field-container select {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px royalblue solid;
+}
+
+.modal-overlay #modal .container-fluid .wrapper .modal-icon {
+  font-size: 50px;
+  -webkit-animation: rotateIcon;
+          animation: rotateIcon;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  opacity: 1;
+}
+
+.modal-overlay #modal .container-fluid .wrapper .fa-exclamation-circle {
+  color: orange;
+}
+
+.modal-overlay #modal .container-fluid .wrapper h2 {
+  margin-top: 10px;
+}
+
+.modal-overlay #modal .container-fluid .wrapper form {
+  margin-top: 20px;
+}
+
+.modal-overlay #modal .container-fluid .wrapper form .inputs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-overlay #modal .container-fluid .wrapper form .inputs-container input[type="text"], .modal-overlay #modal .container-fluid .wrapper form .inputs-container input[type="date"], .modal-overlay #modal .container-fluid .wrapper form .inputs-container input[type="number"], .modal-overlay #modal .container-fluid .wrapper form .inputs-container select {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px royalblue solid;
+}
+
+.modal-overlay #modal .container-fluid .wrapper form .button-container {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-overlay #modal .container-fluid .wrapper form .button-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: calc(100% / 2 - 1%);
+}
+
+.modal-overlay #modal .container-fluid .wrapper form .button-container .primary-button {
+  color: #FFFFFF;
+  background-color: royalblue;
+}
+
+.modal-overlay #modal .container-fluid .wrapper form .button-container .danger-button {
+  color: #FFFFFF;
+  background-color: #ff1f62;
+}
+
+@-webkit-keyframes modalAnimation {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@keyframes modalAnimation {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes rotateIcon {
+  from {
+    -webkit-transform: rotateY(180deg) scale(1.5);
+            transform: rotateY(180deg) scale(1.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotateY(0deg) scale(1);
+            transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIcon {
+  from {
+    -webkit-transform: rotateY(180deg) scale(1.5);
+            transform: rotateY(180deg) scale(1.5);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotateY(0deg) scale(1);
+            transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-overlay #modal {
+    width: 300px;
+    -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .modal-overlay #modal .container-fluid .wrapper form button {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=modal.css.map */

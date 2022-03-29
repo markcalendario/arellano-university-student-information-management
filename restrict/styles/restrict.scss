@@ -1,0 +1,33 @@
+@import '../../styles/all.scss';
+
+#restriction-page {
+    margin-top: 150px;
+    .container {
+        .wrapper {
+            text-align: center;
+            .img-container {
+                width: 250px;
+                margin: auto;
+                img {
+                    width: 100%;
+                }
+            }
+            .text-container {
+                margin-top: 30px;
+                h1 {
+                    color: $dangerAccent;
+                }
+            }
+
+            form {
+                margin-top: 20px;
+                input {
+                    padding: 10px;
+                    width: 200px;
+                    @include button($mainAccent);
+                    @include shadow;
+                }
+            }
+        }
+    }
+}

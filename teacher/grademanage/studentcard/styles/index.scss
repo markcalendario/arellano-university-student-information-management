@@ -1,0 +1,282 @@
+@import '../../../../styles/all.scss';
+@import '../../../../styles/sidebar.scss';
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: $charcoal;
+}
+
+.outsider-tag {
+    color: $white;
+}
+
+.head {
+    font-size: 18px;
+    text-align: center;
+
+}
+
+table {
+    border-spacing: 0;
+
+    th, td {
+        border: 1px black solid;
+        font-size: 12px;
+    }
+    
+    td {
+        padding-left: 5px;
+        height: 0.3cm;
+    }
+}
+
+nav {
+    background-color: $mainAccent;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-bottom: 50px;
+    h1, h3, input {
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+    form {
+        margin-top: 20px;
+        button {
+            padding: 10px;
+            border: 0;
+            border-radius: 5px;
+        }
+    }
+}
+
+#card {
+    width: 13in;
+    background-color: $white;
+    height: 8.5in;
+    .container-fluid {
+        padding: 20px;
+        .card-wrapper {
+            display: flex;
+            justify-content: space-between;
+            
+            .left {
+
+                width: calc(100% / 2 - 5%);
+
+                .grades-tabular {
+                    margin-top: 16px;
+                    height: 336px;
+                    table {
+                        border: 1px black solid;
+                        margin: auto;
+                        width: 100%;
+                        border-spacing: 0;
+                        tr {
+                            th {
+                                font-weight: 100;
+                            }
+
+                            .for-subjects {
+                                width: calc(6.3in / 2);
+                            }
+
+                            .for-quarter {
+                                width: 20%;
+                            }
+
+                            .for-semester-grade {
+                                width: 20%;
+                            }
+
+                            .subject-category {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+            .right {
+
+                width: calc(100% / 2 - 5%);
+
+                .values-table {
+                    margin-top: 35px;
+
+                    table {
+                        width: 100%;
+                        tr {
+                            .core-values-head {
+                                width: 25%;
+                            }
+
+                            .behavior-statement-head {
+                                width: 50%;
+                            }
+
+                            .quarter-head {
+                                width: 25%;
+                            }
+
+                            .core-values {
+                                height: 0.9in;
+                            }
+                        }
+                    }
+                }
+
+                .observed-values {
+                    margin-top: 20px;
+
+                    #observed-values-table {
+                        margin-top: 10px;
+                        width: 100%;
+                        text-align: left;
+                        tr {
+                            th, td {
+                                border: none;
+                            }
+                            th {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+
+                .learner-progress-and-achievement {
+                    margin-top: 20px;
+                    table {
+                        text-align: left;
+                        width: 100%;
+                        tr {
+                            th, td {
+                                padding: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#card-back {
+    width: 13in;
+    background-color: white;
+
+
+    .container-fluid {
+        padding: 10px;
+
+        .card-wrapper {
+            height: 8.5in;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left, .right {
+            width: calc(100% / 2 - 5%);
+        }
+
+        .left {
+            table {
+                width: 100%;
+            }
+
+            .parent-guard-signature {
+                margin-top: 50px;
+                width: 100%;
+                text-align: center;
+
+                h4 {
+                    line-height: 50px;
+                }
+            }
+        }
+
+        .right {
+            .card-banner {
+                text-align: center;
+                .card-banner-img {
+                    width: 1in;
+                    margin: auto;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .report {
+                text-align: center;
+                line-height: 70px;
+            }
+            
+
+            .student-info {
+                table {
+                    width: 100%;
+                    tr {
+                        th, td {
+                            line-height: 30px;
+                            border: none;
+                            border-bottom: 1px black solid;
+                        }
+                    }
+                }
+            }
+
+            .dear-parent {
+                margin-top: 20px;
+                p {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+
+            .primary-signature {
+                margin-top: 30px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: space-around;
+
+                .name {
+                    text-decoration: underline;
+                }
+            }
+
+            .certificate-of-transfer {
+                margin-top: 20px;
+                text-align: center;
+
+                table {
+                    width: 100%;
+                    text-align: left;
+                    
+                    th, td {
+                        border: none;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media print {
+    body {
+        background-color: transparent;
+    }
+    nav {
+        display: none;
+    }
+
+    .container {
+        margin: 0;
+    }
+}

@@ -1,0 +1,141 @@
+@import '../../styles/all.scss';
+@import '../../styles/sidebar.scss';
+
+#dots-indicator {
+    margin-top: 30px;
+    .container {
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            i {
+                padding: 10px;
+                color: $charcoal;
+            }
+        }
+    }
+}
+
+#guidelines {
+    margin-top: 30px;
+    .container {
+        .wrapper {
+            border: 1px $mainAccent solid;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgba($mainAccent, 0.200);
+            h1 {
+                color: $mainAccent;
+                margin-bottom: 10px;
+            }
+            
+            .guidelines-content {
+                .bold {
+                    font-weight: bold;
+                }
+
+                .note {
+                    color: $dangerAccent;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+#add-student-form {
+    margin-top: 50px;
+    .container {
+        .information-page {
+            display: none;
+            fieldset {
+                border: none;
+                border-radius: 5px;
+                padding: 20px;
+                margin-top: 20px;
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                
+                @include shadow;
+
+                input, select {
+                    margin-top: 10px;
+                }
+
+                input[type="text"], 
+                input[type="date"], 
+                input[type="number"],
+                select {
+                    border:none;
+                    font-size: 20px;
+                    width: 100%;
+                    background-color: $white;
+                    border-bottom: 1px $mainAccent solid;
+                }
+            }
+            .linear-input {
+                // display: flex;
+                justify-content: space-between;
+            }
+
+            .button-container {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                button {
+                    width: calc(100% / 2 - 2%);
+                    padding: 20px;
+                    border: none;
+                    font-size: 20px;
+                    border-radius: 10px;
+                    @include shadow;
+                }
+
+                .next-button {
+                    background-color: $mainAccent;
+                    color: $white;
+                }
+
+                .submit-button {
+                    background-color: $stableAccent;
+                    color: $white;
+                }
+
+                .prev-button {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #add-student-form {
+        .container {
+            .information-page {
+                fieldset {
+    
+                    input {
+
+                    }
+    
+                    input[type="text"], 
+                    input[type="date"], 
+                    input[type="number"],
+                    select {
+
+                    }
+                }
+                .linear-input {
+                    display: flex;
+    
+                    & > * {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+}

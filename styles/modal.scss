@@ -1,0 +1,162 @@
+@import '../styles/all.scss';
+
+
+
+.modal-overlay {
+    background-color: rgba($charcoal, 0.500);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    .edit-student-modal {
+        height: 500px;
+        overflow-y: scroll;
+    }
+    #modal {
+        width: 80%;
+        margin: auto;
+        background-color: $white;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 10px;
+        animation-name: modalAnimation;
+        animation-duration: .3s;
+        
+        .container-fluid {
+
+            .wrapper {
+                text-align: center;
+
+                .edit-field-container {
+                    display: flex;
+                    text-align: left;
+                    flex-direction: column;
+                    input[type="text"], input[type="date"], select {
+                        padding: 10px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        border: 1px $mainAccent solid;
+                    }
+                }
+                
+                .modal-icon {
+                    font-size: 50px;
+                    animation: rotateIcon;
+                    animation-duration: 0.8s;
+                    opacity: 1;
+                }
+
+                .fa-exclamation-circle {
+                    color: $warningAccent;
+                }
+                h2 {
+                    margin-top: 10px;
+                }
+                form {
+                    margin-top: 20px;
+
+
+                    .inputs-container {
+                        display: flex;
+                        flex-direction: column;
+                        input[type="text"], input[type="date"], input[type="number"], select {
+                            padding: 10px;
+                            border: none;
+                            border-bottom: 1px $mainAccent solid;
+                        }
+                    }
+
+                    .button-container {
+                        margin-top: 30px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        button {
+                            padding: 10px;
+                            border: none;
+                            border-radius: 10px;
+
+                            width: calc(100% / 2 - 1%);
+                        }
+    
+                        .primary-button {
+                            color: $white;
+                            background-color: $mainAccent;
+                        }
+    
+                        .danger-button {
+                            color: $white;
+                            background-color: $dangerAccent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes modalAnimation {
+        from {
+            transform: translate(-50%, -50%) scale(0.5);   
+            
+       
+        }
+
+        to {
+            transform: scale(1) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes rotateIcon {
+        from {
+            transform: rotateY(180deg) scale(1.5); 
+            opacity: 0;           
+        }
+
+        to {
+            transform: rotateY(0deg) scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal-overlay {
+
+        #modal {
+            width: 300px;
+            @include shadow;
+            .container-fluid {
+                .wrapper {
+
+                    
+                    .modal-icon {
+
+                    }
+    
+                    .fa-exclamation-circle {
+
+                    }
+                    h2 {
+
+                    }
+                    form {
+
+    
+                        button {
+                            font-size: 16px;
+                        }
+    
+                        .primary-button {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

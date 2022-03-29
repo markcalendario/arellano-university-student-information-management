@@ -1,0 +1,372 @@
+@import '../../styles/all.scss';
+@import '../../styles/sidebar.scss';
+
+#search {
+    margin-top: 30px;
+    .container {
+        .search-wrapper {
+            background-color: $white;
+            @include shadow();
+            padding: 10px;
+            border-radius: 10px;
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: transparent;
+                }
+                .search-button-container {
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        i {
+                            padding: 10px;
+                            background-color: $whiteAccent;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#strand-main {
+    margin: 50px auto;
+    .container {
+        .wrapper {
+
+            .strand-chooser {
+                height: 250px;
+                width: 100%;
+                background-color: $white;
+                @include shadow;
+                border-radius: 5px;
+                overflow-y: scroll;
+                position: relative;
+                
+                
+                .topper {
+                    width: 100%;
+                    background-color: yellow;
+                    background-color: $white;
+                    position: sticky;
+                    top: 0;
+                    display: flex;
+                    align-items: center;
+                    z-index: 1;
+                    @include shadow;
+
+                    form {
+                        button {
+                            padding: 5px;
+                            border: 0;
+                            color: $white;
+
+                            &[name="create-strand-prompt"] {
+                                background-color: $stableAccent;
+                            }
+
+                            &[name="cancel"] {
+                                background-color: $dangerAccent
+                            }
+                        }
+
+                    }
+                    
+                    h1 {
+                        color: $mainAccent;
+                        padding: 10px;
+                    }
+                }
+
+                .strand-chooser-wrapper {
+                    padding: 10px;
+
+                    form {
+                        margin: 10px 0;
+                        width: 100%;
+                        button {
+                            width: 100%;
+                            border: 0;
+                            background-color: $mainAccent;
+                            color: $white;
+                            text-align: left;
+                            padding: 10px;
+                            border-radius: 5px;
+                            transition: 0.1s ease-in-out;
+                        
+                            &:hover {
+                                transform: scale(1.01);
+                            }
+                        }
+                    }
+
+                    #strand-creator-form {
+                        display: flex;
+                        flex-direction: column;
+
+                        input, select,button {
+                            padding: 10px;
+                            margin: 10px 0;
+                        }
+
+                        input, select {
+                            border: 0;
+                            border-bottom: 1px $mainAccent solid;
+                        }
+
+                        button {
+                            background-color: $stableAccent;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .strand-info {
+                margin: 30px 0;
+                .strand-info-wrapper {
+                    height: 250px;
+                    width: 100%;
+
+                    .topper {
+                        margin-bottom: 10px;
+                        h1 {
+                            color: $mainAccent;
+                            font-size: x-large;
+                        }
+                    }
+                    
+                    .strand-info-bar {
+                        background-color: $white;
+                        padding: 20px;
+                        border-radius: 10px;
+                        @include shadow;
+
+                        .no-strand-info {
+                            color: $dangerAccent;
+                        }
+
+                        h1,p {
+                            color: $mainAccent;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+
+                        h1 {
+                            font-size: x-large;
+                        }
+
+                        .desc {
+                            font-weight: lighter;
+                        }
+                        
+
+                        .strand-controls {
+                            margin: 10px 0 0 0;
+
+                            button {
+                                padding: 10px;
+                                border: 0;
+                                color: $white;
+                                border-radius: 5px;
+
+                                &[name="edit-strand"] {
+                                    background-color: $stableAccent;
+                                }
+                                &[name="flush"] {
+                                    background-color: $white;
+                                    color: $mainAccent;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+#subject-strands {
+    .container {
+        .wrapper {
+
+            .topper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0;
+                h1 {
+                    font-size: x-large;
+                    color: $mainAccent;
+                }
+
+                form {
+                    button {
+                        padding: 10px;
+                        border: 0;
+
+                        color: $white;
+                    }
+                    button[name="create-strand-subject-list"] {
+                        background-color: $dangerAccent;
+                    }
+
+                    button[name="edit-subjects-list"] {
+                        background-color: $mainAccent;
+                    }
+                }
+            }
+
+            table {
+                width: 100%;
+
+                tr {
+                    th, td {
+                        padding: 10px;
+                        width: calc(100% / 3);
+                    }
+
+                    .not-enrolled {
+                        background-color: rgba($dangerAccent, 0.500);
+                    }
+
+                    .enrolled {
+                        background-color: $white;
+                        color: $mainAccent;
+                    }                  
+
+                    th {
+                        background-color: $mainAccent;
+                        color: $white;
+                    }
+
+                    td {
+                        color: $white;
+
+                        select {
+                            width: 100%;
+                            padding: 10px;
+                            background-color: $white;
+                            color: $charcoal;
+                            border: 1px $mainAccent solid;
+
+                            option {
+                                background-color: $white;
+                                color: $mainAccent;
+
+                            }
+
+                            .current {
+                                background-color: rgba($mainAccent, 0.500);
+                                color: white;
+                            }
+
+                            .set-to-none {
+                                background-color: rgba($dangerAccent, 0.500);
+                                color: white;
+                            }
+
+                        }
+
+                        h1 {
+                            color: $charcoal;
+                            margin-bottom: 10px;
+                        }
+
+                        button {
+                            padding: 5px;
+                            width: 100%;
+                            color: $white;
+                        }
+
+                        button[name="change-subject"] {
+                            background-color: $stableAccent;
+                            border: 0;
+                            border-radius: 5px;
+                        }
+                    }
+
+                }
+            }
+
+            button[name="save-subjects-list"] {
+                background-color: $stableAccent;
+                padding: 10px;
+                color: $white;
+                border: 0;
+                width: 100%;
+                font-size: 20px;
+                margin: 0 0 10px 0;
+            }
+
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    #strand-main {
+        margin: 50px auto;
+        .container {
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+    
+                .strand-chooser {
+                    width: calc(100% / 2 - 1%);
+
+                    .topper {
+    
+                        form {
+                            button {
+                            }
+                        }
+                        
+                        h1 {
+                        }
+                    }
+    
+                    .strand-chooser-wrapper {
+                        padding: 10px;
+    
+                        form {
+
+                            button {
+                            }
+                        }
+                    }
+                }
+    
+                .strand-info {
+                    width: calc(100% / 2 - 1%);
+                    margin: 0;
+
+                    .strand-info-wrapper {   
+                        .strand-info-bar {
+                            h1,p {
+                            }
+    
+                            h1 {
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+    
+}

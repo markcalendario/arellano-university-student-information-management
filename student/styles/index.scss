@@ -1,0 +1,399 @@
+//
+// STUDENT STYLESHEET
+//
+
+@import '../../styles/all.scss';
+@import '../../styles/sidebar.scss';
+
+#greetings {
+    margin-top: 30px;
+    .container {
+        .greetings-wrapper {
+            background-color: $dangerAccent;
+            border-radius: 10px;
+            padding: 10px 0 10px 0;
+            .container {
+                text-align: left;
+                .greet-texts {
+                    width: 100%;
+                    .greet-title {
+                        h1 {
+                            padding-bottom: 10px;
+                            @include transparentText($white);
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                    .greet-text-content {
+                        @include transparentText($white);
+                    }
+                }
+                .greet-icon {
+                    transform: translateY(-20px);
+                    text-align: center;
+                    img {
+                        width: 120px;
+                        margin: auto;
+                        text-align: center;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#standing {
+    margin-top: 50px;
+
+    .container {
+        .standing-wrapper {
+            background-color: $white;
+            padding: 20px;
+            @include shadow();
+            border-radius: 10px;
+
+            .batch {
+                background-color: $mainAccent;
+            }
+
+            .room {
+                background-color: $stableAccent;
+            }
+
+            .strand {
+                background-color: $warningAccent;
+            }
+
+            .standing {
+                                
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .standing-result {
+
+                    border-radius: 5px;
+                    text-align: center;
+                    padding: 10px;
+                    width: calc(100% / 3 - 5%);
+    
+                    h1,p {
+                        color: $white;
+                    }
+    
+                    p {
+                        padding: 5px 0 0 0;
+                    }
+                }
+            }
+
+            .semester-result {
+                margin-top: 10px;
+
+                table {
+                    width: 100%;
+                    tr {
+                        th, td {
+                            padding: 5px;
+                            text-align: left;
+                        }
+
+                        th {
+                            width: 50%;
+                        }
+                        .passed { color: $stableAccent; }
+
+                        .failed { color: $dangerAccent }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#grade-management {
+    margin: 30px 0;
+    .container {
+        .wrapper {
+
+            #student-selector {
+                background: $white;
+                width: 100%;
+                height: 300px;
+                border-radius: 5px;
+                @include shadow;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                &::-webkit-scrollbar {
+                    display: none;    
+                }
+
+                .title {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: calc(100% - 20px);
+                    background-color: $white;
+
+                    h1 {
+                        color: $mainAccent;
+                    }
+                }
+
+                .student-list {
+                    margin: 10px 0;
+    
+                    form {
+                        button {
+                            width: 100%;
+                            text-align: left;
+                            padding: 10px;
+                            color: $white;
+                            border: none;
+    
+                            i {
+                                padding-right: 10px;
+                            }
+                        }
+                        
+                        .no-student-to-show {
+                            color: $dangerAccent;
+                            font-weight: bold;
+                        }
+    
+                        .male {
+                            background-color: $mainAccent;
+                        }
+    
+                        .female {
+                            background-color: $dangerAccent;
+                        }
+                    }
+                }
+            }
+
+            #student-information {
+                margin: 50px 0;
+                .wrapper {
+                    .title {
+                        margin: 10px 0;
+                        h1 {
+                            font-size: large;
+                            color: $mainAccent;
+                        }
+                    }
+                    table {
+                        width: 100%;
+                        tr {
+                            th, td {
+                                width: calc(100% / 2);
+                                text-align: left;
+                                padding: 10px;
+                            }
+
+                            th {
+                                background-color: $mainAccent;
+                                color: $white;
+                            }
+
+                            td {
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #student-grade {
+                width: 100%;
+                .wrapper {
+
+                    .title {
+                        h1 {
+                            font-size: large;
+                            margin: 10px 0;
+                            color: $mainAccent;
+                        }
+
+                        form {
+                            button, .view-card-button {
+                                color: $white;
+                                padding: 10px;
+                                border-radius: 10px;
+                                border: none;
+
+                                &[name="create-grade-field-prompt"] {
+                                    background-color: $stableAccent;
+                                }
+                            }
+                            .view-card-button {
+                                background-color: $mainAccent;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    table {
+                        margin: 20px 0;
+                        width: 100%;
+                        border-spacing: 0;
+
+                        .sem-title {
+                            text-align: center;
+                        }
+
+                        tr {
+                            th,td {
+                                text-align: left;
+                                padding: 10px 0;
+                                font-size: small;
+                                text-align: center;
+                                border: 1px $mainAccent solid;
+                            }
+
+                            .failed, .passed, .incomplete {
+                                font-weight: bold;
+                            }
+
+                            .failed {
+                                color: $dangerAccent;
+                            }
+
+                            .passed {
+                                color: $stableAccent;
+                            }
+
+                            .incomplete {
+                                color: gray;
+                            }
+
+                            .subject-name {
+                                width: calc(30%);
+                            }
+
+                            .small-data {
+                                width: calc(50% / 3);
+                            }
+
+                            th {
+                                background-color: $mainAccent;
+                                color: $white;
+                            }
+
+                            td {
+                                background-color: $white;
+
+                                input[name="grade-period-1"],
+                                input[name="grade-period-2"] {
+                                    border: none;
+                                    border-bottom: 1px $mainAccent solid;
+                                }
+
+                                button[name="edit-grade"] {
+                                    background-color: transparent;
+                                    border: none;
+                                    color: $stableAccent;
+                                    padding: 2px;
+                                }
+
+                                button[name="save-grade"] {
+                                    background-color: transparent;
+                                    border: none;
+                                    color: $mainAccent;
+                                    padding: 2px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #greetings {
+        .container {
+            .greetings-wrapper {
+                .container {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    .greet-texts {
+                        width: 100%;
+                        .greet-title {
+                            h1 {
+                                span {
+                                }
+                            }
+                        }
+                        .greet-text-content {
+                        }
+                    }
+                    .greet-icon {
+                        transform: translateY(-30px);
+                        img {
+                            width: 140px;
+                            transform: scale(1.3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    table {
+        font-size: 16px !important;
+        input[type="submit"] {
+            font-size: 16px !important;
+        }
+    }
+
+    #standing {
+        margin-top: 50px;
+    
+        .container {
+            .standing-wrapper {
+    
+                .standing-result {
+
+                    h1 {
+                    }
+    
+                    a {
+                    }
+                }
+    
+                .semester-result {
+    
+                    table {
+                        tr {
+                            th, td {
+                            }
+    
+                            th {
+                                width: 50%;
+                            }
+                            .passed {}
+    
+                            .failed {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+
+
+
+}
