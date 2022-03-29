@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2021 at 05:48 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Generation Time: Mar 29, 2022 at 04:37 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -80,7 +80,9 @@ INSERT INTO `activity_log` (`activity_id`, `activity_doer`, `activity_text`, `ac
 (598, 'Mark  S. Calendario', 'has disconnected.', '2021-03-14 15:45:01'),
 (599, 'Kenneth  S. Calendario', 'has logged in.', '2021-03-14 15:45:26'),
 (600, 'Kenneth  S. Calendario', 'has disconnected.', '2021-03-14 16:48:29'),
-(601, ' ', 'has disconnected.', '2021-03-14 16:48:29');
+(601, ' ', 'has disconnected.', '2021-03-14 16:48:29'),
+(602, 'Mark  S. Calendario', 'has logged in.', '2022-03-29 08:35:20'),
+(603, 'Mark  S. Calendario', 'has disconnected.', '2022-03-29 08:36:45');
 
 -- --------------------------------------------------------
 
@@ -288,24 +290,25 @@ CREATE TABLE `user_credentials` (
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `usertype` int(11) DEFAULT NULL,
-  `account_status` int(11) NOT NULL DEFAULT 1
+  `account_status` int(11) NOT NULL DEFAULT 1,
+  `profile_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user_credentials`
 --
 
-INSERT INTO `user_credentials` (`id`, `email`, `password`, `usertype`, `account_status`) VALUES
-(2, 'mark@aujrc.edu', '$2y$12$dxVNXZdokuGWhcN3jFNl8uswK0SLqxctxCvljGe9PAtK4ELXib8T.', 1, 1),
-(114, 'juan.sumulong@aujrc.edu', '$2y$10$S1u/mDMnEjxLzhhQ/uk8Z.GaPdVgyYovFImjJD/pSAV0QCt6Re5LS', 0, 1),
-(119, '3513512@aujrc.edu', '$2y$10$iAKzbQX2Q62Z8vMlTzWz2.Jja/re9zK1Vu4gE9fITZ/5RSEXYzgBS', 0, 1),
-(120, 'tafs.asgasgas@aujrc.edu', '$2y$10$JzqWYn3F3EouGJhabp3DYuZPtHVph1ql2xb3TXVeD86NIhnvDIdeO', 0, 1),
-(121, '14@aujrc.edu', '$2y$10$okpSHU9ovGPYgoFW1bMeauZJqaKkiYJNXgFBdTTva6IVr9CzlFx.W', 0, 1),
-(122, '34333@aujrc.edu', '$2y$10$EGroymGBJH1uCOwlJjgKnexcyi1EIXs39jH6ae0si4dG0HJnfiuD2', 0, 1),
-(123, 'carljoseph.sunga@aujrc.edu', '$2y$10$Le22p5LqGsaon4iQiF.S7uEJegT5m0vocpJQUOfYdTVs5nobUjmPK', 1, 1),
-(124, '136611080058@aujrc.edu', '$2y$10$jWw2xTtpCa.IvzC3Npu9Lu3NWs.Ex/smZPnq0ZoJ//YGwFWVPMkKe', 0, 1),
-(125, 'arne.diestra@aujrc.edu', '$2y$10$A9rYBH/IUW2sg.GhP.DcIeOCgGkW9w9MeRm5D1E0EUcE0pQ1OxCVu', 1, 1),
-(126, '136611080052@aujrc.edu', '$2y$10$Fl0p8LToYPx/B0UhRYH9Bu04ikZCRIlbsmozHj80FVsv0DEEpOhLq', 0, 1);
+INSERT INTO `user_credentials` (`id`, `email`, `password`, `usertype`, `account_status`, `profile_status`) VALUES
+(2, 'mark@aujrc.edu', '$2a$12$tw3Zwa/UYWViL6pH8iKCceWHUxKL0a65OV0dA4hFwMBkKa80YXv9C', 1, 1, 1),
+(114, 'juan.sumulong@aujrc.edu', '$2y$10$S1u/mDMnEjxLzhhQ/uk8Z.GaPdVgyYovFImjJD/pSAV0QCt6Re5LS', 0, 1, 0),
+(119, '3513512@aujrc.edu', '$2y$10$iAKzbQX2Q62Z8vMlTzWz2.Jja/re9zK1Vu4gE9fITZ/5RSEXYzgBS', 0, 1, 0),
+(120, 'tafs.asgasgas@aujrc.edu', '$2y$10$JzqWYn3F3EouGJhabp3DYuZPtHVph1ql2xb3TXVeD86NIhnvDIdeO', 0, 1, 0),
+(121, '14@aujrc.edu', '$2y$10$okpSHU9ovGPYgoFW1bMeauZJqaKkiYJNXgFBdTTva6IVr9CzlFx.W', 0, 1, 0),
+(122, '34333@aujrc.edu', '$2y$10$EGroymGBJH1uCOwlJjgKnexcyi1EIXs39jH6ae0si4dG0HJnfiuD2', 0, 1, 0),
+(123, 'carljoseph.sunga@aujrc.edu', '$2y$10$Le22p5LqGsaon4iQiF.S7uEJegT5m0vocpJQUOfYdTVs5nobUjmPK', 1, 1, 0),
+(124, '136611080058@aujrc.edu', '$2y$10$jWw2xTtpCa.IvzC3Npu9Lu3NWs.Ex/smZPnq0ZoJ//YGwFWVPMkKe', 0, 1, 0),
+(125, 'arne.diestra@aujrc.edu', '$2y$10$A9rYBH/IUW2sg.GhP.DcIeOCgGkW9w9MeRm5D1E0EUcE0pQ1OxCVu', 1, 1, 0),
+(126, '136611080052@aujrc.edu', '$2y$10$Fl0p8LToYPx/B0UhRYH9Bu04ikZCRIlbsmozHj80FVsv0DEEpOhLq', 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -485,7 +488,7 @@ ALTER TABLE `user_school_info`
 -- AUTO_INCREMENT for table `activity_log`
 --
 ALTER TABLE `activity_log`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=602;
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=604;
 
 --
 -- AUTO_INCREMENT for table `announcements`
