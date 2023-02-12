@@ -56,3 +56,10 @@ It was developed as a partial requirements for the Practical Research 2 subject 
 
 ![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
+
+## All Rights Reserved
+
+© [Mark Kenneth Calendario](https://github.com/markcalendario)
+
+No part of this code may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the copyright owner. 
+
