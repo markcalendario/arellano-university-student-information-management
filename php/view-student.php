@@ -35,7 +35,7 @@ class viewStudent {
     private $studentGrade = '';
     private $strandName = '';
 
-    public function viewStudent() {
+    public function __construct() {
 
         $con = connect();
 

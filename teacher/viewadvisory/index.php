@@ -14,10 +14,10 @@ if (!isset($_SESSION['loggedin'])) {
     header('location: ../../');
 }
 
-
 #
 # CONSTRUCTION OF WHOLE PAGE'S INFORMATION
 #
+
 $viewSection = new viewSection;
 
 class viewSection {
